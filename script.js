@@ -33,11 +33,12 @@ btnnew.addEventListener("click", function () {
   score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
-  player0.classList.add("player--active");
+  diceEl.classList.add("hidden");
 
-  document
-    .querySelector(`.player--${activePlayer}`)
-    .classList.remove("player--active");
+  player0.classList.remove("player--winner");
+  player1.classList.remove("player--winner");
+  player1.classList.remove("player--active");
+  player0.classList.add("player--active");
 });
 
 // rolling dice functionality
